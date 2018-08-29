@@ -31,7 +31,7 @@ RxTimePicker.newInstance()
         .asObservable()  
         .subscribe(timeInfo -> {  
             String msg = timeMessage(timeInfo);  
-  tv_date.setText(msg);  
+            tv_date.setText(msg);  
   });
 ```
 
@@ -39,12 +39,12 @@ RxTimePicker.newInstance()
 ```java
 RxDatePicker.newInstance()  
         .minDate(System.currentTimeMillis() - (4 * 24 * 60 * 60 * 1000)) // 4 days  
-  .maxDate(System.currentTimeMillis() + (4 * 24 * 60 * 60 * 1000))  
+        .maxDate(System.currentTimeMillis() + (4 * 24 * 60 * 60 * 1000))  
         .show(getSupportFragmentManager())  
         .asObservable()  
         .subscribe(dateInfo -> {  
             String msg = dateMessage(dateInfo);  
-         tv_time.setText(msg);  
+            tv_time.setText(msg);  
   });
 ```
 
@@ -52,7 +52,7 @@ RxDatePicker.newInstance()
 ```java
 RxDateTimePicker.newInstance()  
         .minDate(System.currentTimeMillis() - (4 * 24 * 60 * 60 * 1000)) // 4 days  
-  .maxDate(System.currentTimeMillis() + (4 * 24 * 60 * 60 * 1000))  
+        .maxDate(System.currentTimeMillis() + (4 * 24 * 60 * 60 * 1000))  
         .show(getSupportFragmentManager())  
         .asObservable()  
         .subscribe(dateTimeInfo -> {  

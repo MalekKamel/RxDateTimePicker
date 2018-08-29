@@ -5,8 +5,8 @@
 ##### RxJava wrapper for date and time pickers.
 
 
-[alt text](https://github.com/ShabanKamell/RxDateTimePicker/blob/master/blob/master/raw/date_picker.png "Sample App")
-{: height="36px" width="36px"}
+[alt text](https://github.com/ShabanKamell/RxDateTimePicker/blob/master/blob/master/raw/date_picker.png  | width=48 "Sample App")
+
 | ![alt text](https://github.com/ShabanKamell/RxDateTimePicker/blob/master/blob/master/raw/date_picker.png "Sample App") |![alt text](https://github.com/ShabanKamell/RxDateTimePicker/blob/master/blob/master/raw/time_picker.png "Sample App") | ![alt text](https://github.com/ShabanKamell/RxDateTimePicker/blob/master/blob/master/raw/date_time_picker.png "Sample App")|
 
 # Installation

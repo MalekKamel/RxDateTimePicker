@@ -2,7 +2,7 @@
 # RxLocationSettingsRequest
 ###  RxJava wrapper for Android LocationSettingsRequest used to enable GPS.
 
-<img src="https://github.com/ShabanKamell/RxLocationSettingsRequest/blob/master/blob/master/raw/sample.png" height="600">
+<img src="https://github.com/ShabanKamell/RxLocationSettingsRequest/blob/master/blob/master/raw/sample.png" height="500">
 
 #### If you tried to enable GPS in Android before, you'll find it a complex task and encounter many problems. One of these problems is ` ResolvableApiException` which you must handle in your onActivityResult(). As a result you'll spread your logic everywhere!
 

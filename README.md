@@ -33,6 +33,7 @@ allprojects {
   maven { url "https://dl.bintray.com/shabankamel/android" } 
  }
 }
+```
 
 ### See 'app' module for the full code.
 

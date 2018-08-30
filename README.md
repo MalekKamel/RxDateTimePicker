@@ -15,12 +15,6 @@
 dependencies {
     implementation 'com.sha.kamel:rx_date_time_picker:1.0.0@aar'
 }
-
-allprojects {
- repositories { 
-  maven { url "https://dl.bintray.com/shabankamel/android" } 
- }
-}
 ```
 
 # Usage:

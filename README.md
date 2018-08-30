@@ -12,7 +12,7 @@
 ```java
 LocationRequest locationRequest = new ...
 new RxLocationSettingsRequest()  
-        .request(locationRequest, MainActivity.this)  
+        .request(locationRequest, MainActivity.this) // FragmentActivity
         .subscribe(isLocationRequested -> {  
             if (isLocationRequested){  
                 // Location is now enabled and you can implement your logic of  

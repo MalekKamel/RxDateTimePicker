@@ -1,5 +1,5 @@
 
-# RxLocationSettingsRequest
+# RxDateTimePicker
 ###  RxJava wrapper for Android LocationSettingsRequest used to enable GPS.
 
 <img src="https://github.com/ShabanKamell/RxLocationSettingsRequest/blob/master/blob/master/raw/sample.png" height="500">

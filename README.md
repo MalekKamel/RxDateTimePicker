@@ -1,38 +1,59 @@
-
 # RxDateTimePicker
-###  RxJava wrapper for Android LocationSettingsRequest used to enable GPS.
 
-<img src="https://github.com/ShabanKamell/RxLocationSettingsRequest/blob/master/blob/master/raw/sample.png" height="500">
+## RxJava wrapper for date and time pickers.
 
-#### If you tried to enable GPS in Android before, you'll find it a complex task and encounter many problems. One of these problems is ` ResolvableApiException` which you must handle in your onActivityResult(). As a result you'll spread your logic everywhere!
-
-# The Clean Solution
-##### Using RxLocationSettingsRequest you just write few lines of code and all the work will be done for you!
-
-```java
-LocationRequest locationRequest = new ...
-new RxLocationSettingsRequest()  
-        .request(locationRequest, MainActivity.this) // FragmentActivity
-        .subscribe(isLocationRequested -> {  
-            if (isLocationRequested){  
-                // Location is now enabled and you can implement your logic of  
-                // location safely  
-              }  
-         });
-```
+|<img src="https://github.com/ShabanKamell/RxDateTimePicker/blob/master/blob/master/raw/date_picker.png" height="500">|<img src="https://github.com/ShabanKamell/RxDateTimePicker/blob/master/blob/master/raw/time_picker.png" height="500">|<img src="https://github.com/ShabanKamell/RxDateTimePicker/blob/master/blob/master/raw/date_time_picker.png" height="500">|
 
 # Installation
-[ ![Download](https://api.bintray.com/packages/shabankamel/android/rxlocationsettingsrequest/images/download.svg) ](https://bintray.com/shabankamel/android/rxlocationsettingsrequest/_latestVersion)
-```groovy
-dependencies {
-    implementation 'com.sha.kamel:rx-location-settings-request:1.0.1@aar'
-}
 
-allprojects {
- repositories { 
-  maven { url "https://dl.bintray.com/shabankamel/android" } 
- }
+
+[ ![Download](https://api.bintray.com/packages/shabankamel/android/rxdatetimepicker/images/download.svg) ](https://bintray.com/shabankamel/android/rxdatetimepicker/_latestVersion)
+
+```gradle
+dependencies {
+    implementation 'com.sha.kamel:rx_date_time_picker:1.0.0@aar'
 }
+```
+
+# Usage:
+## RxDatePicker
+```java
+RxTimePicker.newInstance()  
+        .show(getSupportFragmentManager())  
+        .asObservable()  
+        .subscribe(timeInfo -> {  
+            String msg = timeMessage(timeInfo);  
+            tv_date.setText(msg);  
+  });
+```
+
+## RxTimePicker
+```java
+RxDatePicker.newInstance()  
+        .minDate(System.currentTimeMillis() - (4 * 24 * 60 * 60 * 1000)) // 4 days  
+        .maxDate(System.currentTimeMillis() + (4 * 24 * 60 * 60 * 1000))  
+        .show(getSupportFragmentManager())  
+        .asObservable()  
+        .subscribe(dateInfo -> {  
+            String msg = dateMessage(dateInfo);  
+            tv_time.setText(msg);  
+  });
+```
+
+## RxDateTimePicker
+```java
+RxDateTimePicker.newInstance()  
+        .minDate(System.currentTimeMillis() - (4 * 24 * 60 * 60 * 1000)) // 4 days  
+        .maxDate(System.currentTimeMillis() + (4 * 24 * 60 * 60 * 1000))  
+        .show(getSupportFragmentManager())  
+        .asObservable()  
+        .subscribe(dateTimeInfo -> {  
+                    String msg = new StringBuilder()  
+                            .append(dateMessage(dateTimeInfo.getDateInfo()))  
+                            .append("\n")  
+                            .append(timeMessage(dateTimeInfo.getTimeInfo()))  
+                            .toString();  
+                    tv_dateTime.setText(msg);});
 ```
 
 ### See 'app' module for the full code.
